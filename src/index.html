@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECHBIOMED - Tecnología Biomédica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#007bff',
+                        secondary: '#6c757d',
+                        accent: '#764ba2',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="logo">
+                <img src="/public/logo/tech_biomed_logo.png" alt="TECHBIOMEDLOGO" class="h-10">
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="/src/index.html" class="font-medium text-gray-800 hover:text-primary transition-colors">Inicio</a>
+                <a href="/src/page/contact.html"
+                    class="font-medium text-gray-800 hover:text-primary transition-colors">Contacto</a>
+                <a href="#nosotros" class="font-medium text-gray-800 hover:text-primary transition-colors">Nosotros</a>
+                <a href="/src/page/register.html"
+                    class="font-medium text-gray-800 hover:text-primary transition-colors">Registrate</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <div class="relative hidden md:block">
+                    <input type="text" placeholder="¿Qué estás buscando?"
+                        class="pl-3 pr-10 py-2 border border-gray-300 rounded-md w-64">
+                    <i class="fas fa-search absolute right-3 top-3 text-gray-500"></i>
+                </div>
+                <div class="flex space-x-4 text-xl">
+                    
+                    <div class="relative">
+                        <a href="/src/page/cart.html" class="relative">
+                            <i class="fas fa-shopping-cart cursor-pointer"></i>
+                            <span
+                                class="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">2</span>
+                        </a>
+                    </div>
+                    <i class="far fa-user cursor-pointer"></i>
+                </div>
+                <div class="md:hidden text-2xl cursor-pointer mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden bg-white shadow-md py-4 px-6 md:hidden">
+        <a href="/src/index.html" class="block py-2 border-b border-gray-100">Inicio</a>
+        <a href="/src/page/contact.html" class="block py-2 border-b border-gray-100">Contacto</a>
+        <a href="#nosotros" class="block py-2 border-b border-gray-100">Nosotros</a>
+        <a href="/src/page/register.html" class="block py-2">Registrate</a>
+        <div class="mt-4 relative">
+            <input type="text" placeholder="¿Qué estás buscando?"
+                class="w-full pl-3 pr-10 py-2 border border-gray-300 rounded-md">
+            <i class="fas fa-search absolute right-3 top-3 text-gray-500"></i>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row gap-8">
+        <!-- Sidebar -->
+        <aside class="w-full md:w-64 bg-white rounded-lg shadow-sm p-6 h-fit">
+            <div class="mb-8">
+                <h3 class="text-lg font-semibold mb-4">Cirugía</h3>
+                <ul>
+                    <li class="mb-2"><a href="#" class="text-gray-600 hover:text-primary">Hospitalización</a></li>
+                    <li class="mb-2"><a href="#" class="text-gray-600 hover:text-primary">Urgencias</a></li>
+                    <li class="mb-2"><a href="#" class="text-gray-600 hover:text-primary">Equipos de alta
+                            complejidad</a></li>
+                    <li class="mb-2"><a href="#" class="text-gray-600 hover:text-primary">Imágenes diagnósticas</a></li>
+                    <li class="mb-2"><a href="#" class="text-gray-600 hover:text-primary">Laboratorio</a></li>
+                    <li class="mb-2"><a href="#" class="text-gray-600 hover:text-primary">Insumos</a></li>
+                    <li class="mb-2"><a href="#" class="text-gray-600 hover:text-primary">Repuestos</a></li>
+                    <li class="mb-2"><a href="#" class="text-gray-600 hover:text-primary">Terapias</a></li>
+                </ul>
+            </div>
+            <div class="pt-4 border-t border-gray-100">
+                <h4 class="text-primary font-medium">Hoy</h4>
+            </div>
+        </aside>
+
+        <!-- Content Area -->
+        <div class="flex-1">
+            <!-- Hero Banner -->
+            <section
+                class="bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between mb-12 overflow-hidden">
+                <div class="text-white text-center md:text-left mb-6 md:mb-0">
+                    <h1 class="text-5xl md:text-6xl font-bold mb-2">40% OFF</h1>
+                    <p class="text-xl md:text-2xl mb-6">En equipos biomédicos</p>
+                    <button
+                        class="bg-white text-blue-600 font-bold py-3 px-6 rounded-md hover:transform hover:-translate-y-1 transition-transform">COMPRAR
+                        AHORA</button>
+                </div>
+                <div>
+                    <img src="/public/images/ecografo.png" alt="Equipos médicos promo" class="w-full max-w-sm h-auto mx-auto">
+                </div>
+            </section>
+
+            <!-- Product Grid -->
+            <section class="mb-12">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div
+                        class="bg-white rounded-xl p-6 shadow-md hover:-translate-y-1 hover:shadow-lg transition-all relative">
+                        <div class="absolute top-4 left-4 bg-red-500 text-white text-xs font-bold py-1 px-2 rounded">
+                            SALE
+                        </div>
+                        <div class="text-center mb-4 relative">
+                            <img src="/public/images/monitor.png" alt="Monitor de signos vitales"
+                                class="mx-auto">
+                            <i
+                                class="far fa-heart absolute top-0 right-0 text-xl text-gray-300 hover:text-red-500 cursor-pointer"></i>
+                        </div>
+                        <div>
+                            <p class="text-primary text-sm mb-1">Agregar al carrito</p>
+                            <h3 class="text-gray-800 font-medium mb-2">Monitor de signos vitales Mindray VS 12</h3>
+                            <div class="mb-2">
+                                <span class="text-lg font-bold">$350</span>
+                                <span class="text-gray-400 line-through ml-2">$400</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="text-sm text-gray-500 ml-2">(15)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-xl p-6 shadow-md hover:-translate-y-1 hover:shadow-lg transition-all relative">
+                        <div class="absolute top-4 left-4 bg-red-500 text-white text-xs font-bold py-1 px-2 rounded">
+                            SALE</div>
+                        <div class="text-center mb-4 relative">
+                            <img src="/public/images/ecografo.png" alt="Ecógrafo" class="mx-auto">
+                            <i
+                                class="far fa-heart absolute top-0 right-0 text-xl text-gray-300 hover:text-red-500 cursor-pointer"></i>
+                        </div>
+                        <div>
+                            <p class="text-primary text-sm mb-1">Agregar al carrito</p>
+                            <h3 class="text-gray-800 font-medium mb-2">Ecógrafo Samsung Prime 5G</h3>
+                            <div class="mb-2">
+                                <span class="text-lg font-bold">$950</span>
+                                <span class="text-gray-400 line-through ml-2">$1200</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span class="text-sm text-gray-500 ml-2">(78)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-xl p-6 shadow-md hover:-translate-y-1 hover:shadow-lg transition-all relative">
+                        <div class="absolute top-4 left-4 bg-red-500 text-white text-xs font-bold py-1 px-2 rounded">
+                            SALE</div>
+                        <div class="text-center mb-4 relative">
+                            <img src="/public/images/electrocardio.png" alt="Electro" class="mx-auto">
+                            <i
+                                class="far fa-heart absolute top-0 right-0 text-xl text-gray-300 hover:text-red-500 cursor-pointer"></i>
+                        </div>
+                        <div>
+                            <p class="text-primary text-sm mb-1">Agregar al carrito</p>
+                            <h3 class="text-gray-800 font-medium mb-2">Electro Cardiógrafo Cardio Touch 3000</h3>
+                            <div class="mb-2">
+                                <span class="text-lg font-bold">$750</span>
+                                <span class="text-gray-400 line-through ml-2">$850</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="text-sm text-gray-500 ml-2">(45)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-xl p-6 shadow-md hover:-translate-y-1 hover:shadow-lg transition-all relative">
+                        <div class="absolute top-4 left-4 bg-red-500 text-white text-xs font-bold py-1 px-2 rounded">
+                            SALE</div>
+                        <div class="text-center mb-4 relative">
+                            <img src="/public/images/bomba_de_infusion.png" alt="Bomba de infusión" class="mx-auto">
+                            <i
+                                class="far fa-heart absolute top-0 right-0 text-xl text-gray-300 hover:text-red-500 cursor-pointer"></i>
+                        </div>
+                        <div>
+                            <p class="text-primary text-sm mb-1">Agregar al carrito</p>
+                            <h3 class="text-gray-800 font-medium mb-2">Bomba de infusión Hospira Series 6</h3>
+                            <div class="mb-2">
+                                <span class="text-lg font-bold">$175</span>
+                                <span class="text-gray-400 line-through ml-2">$200</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span class="text-sm text-gray-500 ml-2">(32)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-xl p-6 shadow-md hover:-translate-y-1 hover:shadow-lg transition-all relative">
+                        <div class="absolute top-4 left-4 bg-red-500 text-white text-xs font-bold py-1 px-2 rounded">
+                            SALE</div>
+                        <div class="text-center mb-4 relative">
+                            <img src="/public/images/resonancia.png" alt="resonancia" class="mx-auto">
+                            <i
+                                class="far fa-heart absolute top-0 right-0 text-xl text-gray-300 hover:text-red-500 cursor-pointer"></i>
+                        </div>
+                        <div>
+                            <p class="text-primary text-sm mb-1">Agregar al carrito</p>
+                            <h3 class="text-gray-800 font-medium mb-2">Resonador S-Series Cor</h3>
+                            <div class="mb-2">
+                                <span class="text-lg font-bold">$85</span>
+                                <span class="text-gray-400 line-through ml-2">$100</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="text-sm text-gray-500 ml-2">(28)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-10">
+                    <button
+                        class="bg-primary hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-md transition-colors">Ver
+                        todos los productos</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="/src/js/script.js"></script>
+</body>
+
+<footer>Creado por Andres Sierra</footer>
+</html>

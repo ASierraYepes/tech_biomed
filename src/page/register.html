@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear cuenta - TECHBIOMED</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#007bff',
+                        secondary: '#6c757d',
+                        accent: '#764ba2',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="logo">
+                <img src="/public/logo/tech_biomed_logo.png" alt="TECHBIOMEDLOGO" class="h-10">
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="/src/index.html" class="font-medium text-gray-800 hover:text-primary transition-colors">Inicio</a>
+                <a href="/src/page/contact.html"
+                    class="font-medium text-gray-800 hover:text-primary transition-colors">Contacto</a>
+                <a href="#nosotros" class="font-medium text-gray-800 hover:text-primary transition-colors">Nosotros</a>
+                <a href="/src/page/register.html"
+                    class="font-medium text-gray-800 hover:text-primary transition-colors">Registrate</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <div class="relative hidden md:block">
+                    <input type="text" placeholder="¿Qué estás buscando?"
+                        class="pl-3 pr-10 py-2 border border-gray-300 rounded-md w-64">
+                    <i class="fas fa-search absolute right-3 top-3 text-gray-500"></i>
+                </div>
+                <div class="flex space-x-4 text-xl">
+                    
+                    <div class="relative">
+                        <i class="fas fa-shopping-cart cursor-pointer"></i>
+                        <span
+                            class="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">2</span>
+                    </div>
+                    <i class="far fa-user cursor-pointer"></i>
+                </div>
+                <div class="md:hidden text-2xl cursor-pointer mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden bg-white shadow-md py-4 px-6 md:hidden">
+        <a href="/src/index.html" class="block py-2 border-b border-gray-100">Inicio</a>
+        <a href="/src/page/contact.html" class="block py-2 border-b border-gray-100">Contacto</a>
+        <a href="#nosotros" class="block py-2 border-b border-gray-100">Nosotros</a>
+        <div class="mt-4 relative">
+            <input type="text" placeholder="¿Qué estás buscando?"
+                class="w-full pl-3 pr-10 py-2 border border-gray-300 rounded-md">
+            <i class="fas fa-search absolute right-3 top-3 text-gray-500"></i>
+        </div>
+    </div>
+
+    <!-- Auth Content -->
+    <div class="min-h-[calc(100vh-80px)] flex items-center justify-center py-12 px-4">
+        <div class="flex flex-col md:flex-row bg-white rounded-xl shadow-lg overflow-hidden max-w-5xl w-full">
+            <div
+                class="w-full md:w-1/2 bg-gradient-to-r from-blue-500 to-purple-600 p-12 flex items-center justify-center">
+                <img src="/public/images/resonancia.png" alt="Equipo médico" class="max-w-full h-auto">
+            </div>
+            <div class="w-full md:w-1/2 p-12 flex flex-col justify-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Crea una cuenta</h2>
+                <p class="text-gray-600 mb-8">Ingresa tus datos a continuación</p>
+
+                <form class="register-form space-y-6">
+                    <div>
+                        <input type="text" placeholder="Nombre" required
+                            class="w-full border border-gray-300 rounded-md py-3 px-4">
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Correo electrónico" required
+                            class="w-full border border-gray-300 rounded-md py-3 px-4">
+                    </div>
+                    <div>
+                        <input type="password" placeholder="Contraseña" required
+                            class="w-full border border-gray-300 rounded-md py-3 px-4">
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-primary hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-md transition-colors">Crear
+                        cuenta</button>
+                    <button type="button"
+                        class="w-full flex items-center justify-center gap-2 border border-gray-300 bg-white hover:bg-gray-50 py-3 px-6 rounded-md transition-colors">
+                        <i class="fab fa-google"></i>
+                        Registrate con Google
+                    </button>
+                    <p class="text-center text-gray-600">
+                        ¿Ya tienes una cuenta? <a href="/src/page/login.html" class="text-primary">Inicia sesión</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/src/js/script.js"></script>
+</body>
+
+</html>

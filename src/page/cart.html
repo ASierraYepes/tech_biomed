@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - TECHBIOMED</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#007bff',
+                        secondary: '#6c757d',
+                        accent: '#764ba2',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="logo">
+                <img src="/public/logo/tech_biomed_logo.png" alt="TECHBIOMEDLOGO" class="h-10">
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="/src/index.html" class="font-medium text-gray-800 hover:text-primary transition-colors">Inicio</a>
+                <a href="/src/page/contact.html"
+                    class="font-medium text-gray-800 hover:text-primary transition-colors">Contacto</a>
+                <a href="#nosotros" class="font-medium text-gray-800 hover:text-primary transition-colors">Nosotros</a>
+                <a href="/src/page/register.html"
+                    class="font-medium text-gray-800 hover:text-primary transition-colors">Registrate</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <div class="relative hidden md:block">
+                    <input type="text" placeholder="¿Qué estás buscando?"
+                        class="pl-3 pr-10 py-2 border border-gray-300 rounded-md w-64">
+                    <i class="fas fa-search absolute right-3 top-3 text-gray-500"></i>
+                </div>
+                <div class="flex space-x-4 text-xl">
+                    
+                    <div class="relative">
+                        <i class="fas fa-shopping-cart cursor-pointer"></i>
+                        <span
+                            class="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">2</span>
+                    </div>
+                    <i class="far fa-user cursor-pointer"></i>
+                </div>
+                <div class="md:hidden text-2xl cursor-pointer mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden bg-white shadow-md py-4 px-6 md:hidden">
+        <a href="/src/index.html" class="block py-2 border-b border-gray-100">Inicio</a>
+        <a href="/src/page/contact.html" class="block py-2 border-b border-gray-100">Contacto</a>
+        <a href="#nosotros" class="block py-2 border-b border-gray-100">Nosotros</a>
+        <a href="/src/page/register.html" class="block py-2">Registrate</a>
+        <div class="mt-4 relative">
+            <input type="text" placeholder="¿Qué estás buscando?"
+                class="w-full pl-3 pr-10 py-2 border border-gray-300 rounded-md">
+            <i class="fas fa-search absolute right-3 top-3 text-gray-500"></i>
+        </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-50 border-b border-gray-100">
+        <div class="container mx-auto px-4 py-4">
+            <a href="index.html" class="text-primary">Inicio</a> / <span class="text-gray-600">Carrito</span>
+        </div>
+    </div>
+
+    <!-- Cart Content -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-2">
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden mb-6">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="bg-gray-50">
+                                <th class="text-left py-4 px-6 font-semibold">Productos</th>
+                                <th class="text-left py-4 px-6 font-semibold">Precio</th>
+                                <th class="text-left py-4 px-6 font-semibold">Cantidad</th>
+                                <th class="text-left py-4 px-6 font-semibold">Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center space-x-4">
+                                        <img src="/public/images/bomba_de_infusion.png" alt="Bomba de infusión"
+                                            class="w-16 h-16 object-cover rounded">
+                                        <span>Bomba de infusión</span>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6">$650</td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center">
+                                        <button
+                                            class="qty-btn minus w-8 h-8 border border-gray-300 rounded-md flex items-center justify-center">-</button>
+                                        <input type="number" value="1" min="1"
+                                            class="w-16 mx-2 text-center border border-gray-300 rounded-md py-1">
+                                        <button
+                                            class="qty-btn plus w-8 h-8 border border-gray-300 rounded-md flex items-center justify-center">+</button>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 subtotal">$650</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center space-x-4">
+                                        <img src="/public/images/monitor.png" alt="Monitor de signos vitales"
+                                            class="w-16 h-16 object-cover rounded">
+                                        <span>Monitor de signos vitales</span>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6">$950</td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center">
+                                        <button
+                                            class="qty-btn minus w-8 h-8 border border-gray-300 rounded-md flex items-center justify-center">-</button>
+                                        <input type="number" value="2" min="1"
+                                            class="w-16 mx-2 text-center border border-gray-300 rounded-md py-1">
+                                        <button
+                                            class="qty-btn plus w-8 h-8 border border-gray-300 rounded-md flex items-center justify-center">+</button>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 subtotal">$1900</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                    <button
+                        class="bg-secondary hover:bg-gray-600 text-white font-medium py-3 px-6 rounded-md transition-colors">Regresar
+                        a la tienda</button>
+                    <button
+                        class="bg-primary hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-md transition-colors">Actualizar</button>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <input type="text" placeholder="Código cupón"
+                        class="flex-1 border border-gray-300 rounded-md py-3 px-4">
+                    <button
+                        class="bg-primary hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-md transition-colors whitespace-nowrap">Aplicar
+                        cupón</button>
+                </div>
+            </div>
+
+            <div>
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h3 class="text-xl font-semibold mb-6 pb-4 border-b border-gray-100">Total carrito</h3>
+                    <div class="flex justify-between mb-4">
+                        <span class="text-gray-600">Subtotal</span>
+                        <span>$1750</span>
+                    </div>
+                    <div class="flex justify-between mb-4">
+                        <span class="text-gray-600">Envío</span>
+                        <span>Gratis</span>
+                    </div>
+                    <div class="flex justify-between font-bold text-lg pt-4 border-t border-gray-100">
+                        <span>Total</span>
+                        <span>$1750</span>
+                    </div>
+                    <button
+                        class="w-full bg-primary hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-md mt-6 transition-colors">Finalizar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/src/js/script.js"></script>
+</body>
+
+</html>
